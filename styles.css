@@ -1,0 +1,121 @@
+body
+{
+    background-color: black;
+}
+
+.text-white
+{
+    color: #fffefa;
+}
+
+.clickable:hover
+{
+    color: #3a7bba !important;
+    text-decoration: none;
+}
+
+h1
+{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+h2
+{
+    font-size: 24px;
+}
+
+nav
+{
+    margin: 0;
+    padding: 16px;
+    background-color: #242424;
+}
+
+nav .clickable
+{
+    margin: 0px;
+    padding: 20px 35px 17.5px 35px;
+    font-size: 20px;
+}
+
+nav .clickable:hover
+{
+    background-color: #2b2b2b;
+}
+
+.text-link
+{
+    color: #2e6294 !important;
+}
+
+.section-black
+{
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-bottom: 30px;
+    background-color: black;
+}
+
+#home
+{
+    padding: 20px 35px 17.5px 35px;
+}
+
+#githublogo
+{
+    width: auto;
+    height: 40px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+#ytlogo
+{
+    width: auto;
+    height: 40px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+#contact-desc
+{
+    font-size: 20px;
+    margin-left: 50px;
+    margin-top: 70px;
+}
+
+#inactive-alert
+{
+    margin-left: 0px;
+    width: 500px;
+}
+
+#vid
+{
+    z-index: 10;
+    position: absolute;
+    top: 35%;
+    left: 52%;
+    border: none;
+}
+
+#name
+{
+    width: 500px;
+}
+
+#name-in
+{
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white !important;
+    width: 40%;
+    font-size: 40px;
+}
+
+.fadeable
+{
+    opacity: 0;
+}
