@@ -5,7 +5,7 @@ body
 
 .text-white
 {
-    color: #fffefa;
+    color: #ffffff;
 }
 
 .clickable:hover
@@ -27,8 +27,8 @@ h2
 
 nav
 {
+    display: flex;
     margin: 0;
-    padding: 16px;
     background-color: #242424;
 }
 
@@ -37,6 +37,9 @@ nav .clickable
     margin: 0px;
     padding: 20px 35px 17.5px 35px;
     font-size: 20px;
+    flex-shrink: 1;
+    max-width: fit-content;
+    min-width: 100px;
 }
 
 nav .clickable:hover
@@ -55,6 +58,13 @@ nav .clickable:hover
     padding-left: 40px;
     padding-bottom: 30px;
     background-color: black;
+    width: 100%;
+    display: flexbox;
+}
+
+.section-black p 
+{
+    max-width: 90vh;
 }
 
 #home
@@ -85,37 +95,18 @@ nav .clickable:hover
     margin-top: 70px;
 }
 
-#inactive-alert
-{
-    margin-left: 0px;
-    width: 500px;
-}
-
-#vid
-{
-    z-index: 10;
-    position: absolute;
-    top: 35%;
-    left: 52%;
-    border: none;
-}
-
-#name
-{
-    width: 500px;
-}
-
 #name-in
 {
     background: transparent;
     border: none;
     outline: none;
     border-bottom: 1px solid white !important;
-    width: 40%;
+    width: 55vh;
     font-size: 40px;
 }
 
 .fadeable
 {
     opacity: 0;
+    transition: opacity 0.9s ease-in-out;
 }

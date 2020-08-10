@@ -1,67 +1,65 @@
-window.onload = load;
+window.onload = load
 
 let nameField = document.querySelector("#name-in");
 let greeting = document.querySelector("#form-enter");
 let about = document.querySelector("#about");
 let result = document.querySelector("#result");
 
-
 function load()
 {
+  loadSessionStorage();
+  addListeners();
+}
 
+function loadSessionStorage() {
     // See if we have an autosave value
     // (this will only happen if the page is accidentally refreshed)
     if (sessionStorage.getItem("autosave")) {
-      // Restore the contents of the text field
-      nameField.value = sessionStorage.getItem("autosave");
+        // Restore the contents of the text field
+        nameField.value = sessionStorage.getItem("autosave");
     }
 
-    // See if we have an autosave value
-    // (this will only happen if the page is accidentally refreshed)
-    if (sessionStorage.getItem("opacity")) {
-      // Restore the contents of the text field
-      greeting.style.opacity = sessionStorage.getItem("opacity");
-      about.style.opacity = sessionStorage.getItem("opacity");
-    }
-
-    // See if we have an autosave value
-    // (this will only happen if the page is accidentally refreshed)
+    // we also know that we have submitted the form
     if (sessionStorage.getItem("result")) {
-      // Restore the contents of the text field
         result.innerHTML = sessionStorage.getItem("result");
+        result.classList.add("fade-load");
+        greeting.classList.add("fade-load");
+        let c = about.children;
+        for(i = 0; i < c.length; i++)
+        {
+            c[i].classList.add("fade-load");
+        }
+        fadeVisibles();
     }
+}
 
+function addListeners() {
     // Listen for changes in the text field
-    nameField.addEventListener("change", function() {
-      // And save the results into the session storage object
-      sessionStorage.setItem("autosave", nameField.value);
+    nameField.addEventListener("change", function () {
+        // And save the results into the session storage object
+        sessionStorage.setItem("autosave", nameField.value);
     });
-
 }
 
-function greet()
-{
+function greet() {
     let name = document.querySelector("#name-in").value.trim();
-
-
-    if(name === "")
-    {
-        document.querySelector("#result").innerHTML = "Welcome, human.";
+  
+    if (name === "") {
+        result.innerHTML = "Welcome, human.";
         sessionStorage.setItem("result", "Welcome, human.");
+        result.classList.add("fade-load");
     }
-    else
-    {
-        document.querySelector("#result").innerHTML = "Welcome, " + name + ".";
+    else {
+        result.innerHTML = "Welcome, " + name + ".";
         sessionStorage.setItem("result", "Welcome, " + name + ".");
+        result.classList.add("fade-load");
     }
-
-    fadeIn(greeting);
-    fadeIn(about);
-    sessionStorage.setItem("opacity", "1");
+  
+    greeting.classList.add("fade-load");
+    let c = about.children;
+    for (i = 0; i < c.length; i++) {
+        c[i].classList.add("fade-load");
+    }
+    fadeVisibles();
 }
-
-function fadeIn(element)
-{
-    element.style.transition = "opacity 2s ease-in-out"
-    element.style.opacity = "1";
-}
+  

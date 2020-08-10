@@ -1,0 +1,16 @@
+#worth-the-risk-package
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#worth-the-risk
+{
+    flex: 1;
+}
+
+#vid
+{
+    border: none;
+    margin: 10% 10% 10% 40px;
+}
