@@ -5,10 +5,10 @@ let greeting = document.querySelector("#form-enter");
 let about = document.querySelector("#about");
 let result = document.querySelector("#result");
 
-function load()
-{
-  loadSessionStorage();
-  addListeners();
+function load() {
+    loadMain();
+    loadSessionStorage();
+    addListeners();
 }
 
 function loadSessionStorage() {
