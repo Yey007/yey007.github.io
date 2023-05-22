@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2020 Utku Melemetci
+Copyright (c) 2023 Utku Melemetci
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
