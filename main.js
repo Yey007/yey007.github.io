@@ -1,5 +1,5 @@
-window.onscroll = onScrollMain
-window.onload = loadMain
+window.onscroll = onScrollMain;
+window.onload = loadMain;
 
 var fadeQueue = [];
 
@@ -22,8 +22,8 @@ function fadeVisibles() {
   if (fades != null) {
     for (i = 0; i < fades.length; i++) {
       if (isVisible(fades[i]) && !fadeQueue.includes(fades[i])) {
-        fadeQueue.push(fades[i])
-      } 
+        fadeQueue.push(fades[i]);
+      }
     }
   }
 }
@@ -38,13 +38,11 @@ function isVisible(el) {
   return isVisible;
 }
 
-async function fadeIn(element) //element must be fadeable
-{
+async function fadeIn(element) {
+  //element must be fadeable
   element.style.opacity = 1;
 }
 
-
 function delay(ms) {
-  return new Promise( resolve => setTimeout(resolve, ms) );
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
-

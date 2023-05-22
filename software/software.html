@@ -1,76 +1,86 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
-        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
-        <link rel="stylesheet" href="../styles.css">
-        <link rel="stylesheet" href="software.css">
-        <title>
-            Software
-        </title>
-    </head>
-    <body>
-        <nav>
-            <a class="clickable text-white" href="../index.html" id="home">home</a>
-            <a class="clickable text-white" href="software.html">software</a>
-            <a class="clickable text-white" href="../film/film.html">film</a>
-            <a class="clickable text-white" href="../contact/contact.html">contact</a>
-        </nav>
-        <div id="fast-matrices" class="section-black fade-load fadeable">
-            <h1 class="text-white">Projects <a href="https://github.com/Yey007" target="_blank"><img id="githublogo" src="GitHub-Mark-Light.png" alt="Github logo"></a></h1>
-            <h2><a class="clickable text-link" href="https://github.com/Yey007/FastMatrices" target="_blank">Fast Matrices</a></h2>
-            <p class="text-white">
-                FastMatrices is a GPU accelerated matrix library written in C# with the help of
-                <a class="clickable text-link" href="https://github.com/m4rs-mt/ILGPU" target="_blank">ILGPU</a>. 
-                It support many different methods of operating on matrices, including single-threaded, 
-                multi-threaded and of course GPU accelerated "operators" for maximum versatility. 
-                Read more about it in the <a class="clickable text-link" href="https://github.com/Yey007/FastMatrices#readme" target="_blank">README.md</a>.
-            </p>
-        </div>
-        <div id="paper-auto-updater" class="section-black fade-load fadeable">
-            <h2><a class="clickable text-link" href="https://github.com/Yey007/Paper-Auto-Updater" target="_blank">Paper-Auto-Updater</a></h2>
-            <p class="text-white">
-                Paper-Auto-Updater is a plugin for the widely popular minecraft server software 
-                <a class="clickable text-link" href="https://papermc.io" target="_blank">Paper</a>.
-                The plugin is very simple. All it does is update the server software to the newest 
-                version when shutting down. It can also roll back or update to specific versions 
-                with a simple command interface. It's not my best work, and some of the design 
-                descisions are... questionable, but it works. Read more about it in the
-                <a class="clickable text-link" href="https://github.com/Yey007/Paper-Auto-Updater#readme" target="_blank">README.md</a>.
-            </p>
-        </div>
-        <div id="ping-mc-go" class="section-black fade-load fadeable">
-            <h2><a class="clickable text-link" href="https://github.com/Yey007/PingMc" target="_blank">PingMc</a></h2>
-            <p class="text-white">
-                This is yet another minecraft related piece of software. This time, however, 
-                it's not a plugin for a server. PingMc is a discord bot written in Go that 
-                pings minecraft servers for information about player counts. It then updates 
-                a channel's name based on that information. Read more about it in the
-                <a class="clickable text-link" href="https://github.com/Yey007/PingMc#readme" target="_blank">README.md</a>.
-            </p>
-            <div id="inactive" class="alert alert-dark fade-load fadeable" role="alert">
-                <svg id="info" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-info-circle" width="22" height="22" viewBox="0 0 24 24" stroke-width="1.5" stroke="#242424" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z"/>
-                    <circle cx="12" cy="12" r="9" />
-                    <line x1="12" y1="8" x2="12.01" y2="8" />
-                    <polyline points="11 12 12 12 12 16 13 16" />
-                </svg>
-                This bot is currently a little broken and therefore not active.
-            </div>
-        </div>
-        <div id="ilgpu" class="section-black fade-load fadeable">
-            <h1 class="text-white">Contributions</h1>
-            <h2><a class="clickable text-link" href="https://github.com/m4rs-mt/ILGPU" target="_blank">ILGPU</a></h2>
-            <p class="text-white">
-                ILGPU is a .NET library that allows programmers to write GPU accelerated code 
-                without resorting to low-level languages like OpenCL C or CUDA C. I have 
-                contributed a miniscule amount to this library, but I wanted to include it here as 
-                it's a very cool project and the devs are very kind and welcoming. I encourage you 
-                to check it out and contribute! Read more about it in the
-                <a class="clickable text-link" href="https://github.com/m4rs-mt/ILGPU#readme" target="_blank">README.md</a>.
-            </p>
-        </div>
-        <script src="../main.js"></script>
-    </body>
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+    integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="software.css">
+  <title>
+    Software
+  </title>
+</head>
+
+<body>
+  <nav>
+    <a class="clickable text-white" href="../index.html" id="home">home</a>
+    <a class="clickable text-white" href="software.html">software</a>
+    <a class="clickable text-white" href="../film/film.html">film</a>
+    <a class="clickable text-white" href="../contact/contact.html">contact</a>
+  </nav>
+  <div id="fast-matrices" class="section-black fade-load fadeable">
+    <h1 class="text-white">Projects <a href="https://github.com/Yey007" target="_blank"><img id="githublogo"
+          src="GitHub-Mark-Light.png" alt="Github logo"></a></h1>
+    <h2><a class="clickable text-link" href="https://github.com/Yey007/FastMatrices" target="_blank">Fast Matrices</a>
+    </h2>
+    <p class="text-white">
+      FastMatrices is a GPU accelerated matrix library written in C# with the help of
+      <a class="clickable text-link" href="https://github.com/m4rs-mt/ILGPU" target="_blank">ILGPU</a>.
+      It support many different methods of operating on matrices, including single-threaded,
+      multi-threaded and of course GPU accelerated "operators" for maximum versatility.
+      Read more about it in the <a class="clickable text-link" href="https://github.com/Yey007/FastMatrices#readme"
+        target="_blank">README.md</a>.
+    </p>
+  </div>
+  <div id="paper-auto-updater" class="section-black fade-load fadeable">
+    <h2><a class="clickable text-link" href="https://github.com/Yey007/Paper-Auto-Updater"
+        target="_blank">Paper-Auto-Updater</a></h2>
+    <p class="text-white">
+      Paper-Auto-Updater is a plugin for the widely popular minecraft server software
+      <a class="clickable text-link" href="https://papermc.io" target="_blank">Paper</a>.
+      The plugin is very simple. All it does is update the server software to the newest
+      version when shutting down. It can also roll back or update to specific versions
+      with a simple command interface. It's not my best work, and some of the design
+      descisions are... questionable, but it works. Read more about it in the
+      <a class="clickable text-link" href="https://github.com/Yey007/Paper-Auto-Updater#readme"
+        target="_blank">README.md</a>.
+    </p>
+  </div>
+  <div id="ping-mc-go" class="section-black fade-load fadeable">
+    <h2><a class="clickable text-link" href="https://github.com/Yey007/PingMc" target="_blank">PingMc</a></h2>
+    <p class="text-white">
+      This is yet another minecraft related piece of software. This time, however,
+      it's not a plugin for a server. PingMc is a discord bot written in Go that
+      pings minecraft servers for information about player counts. It then updates
+      a channel's name based on that information. Read more about it in the
+      <a class="clickable text-link" href="https://github.com/Yey007/PingMc#readme" target="_blank">README.md</a>.
+    </p>
+    <div id="inactive" class="alert alert-dark fade-load fadeable" role="alert">
+      <svg id="info" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-info-circle" width="22"
+        height="22" viewBox="0 0 24 24" stroke-width="1.5" stroke="#242424" fill="none" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" />
+        <circle cx="12" cy="12" r="9" />
+        <line x1="12" y1="8" x2="12.01" y2="8" />
+        <polyline points="11 12 12 12 12 16 13 16" />
+      </svg>
+      This bot is currently a little broken and therefore not active.
+    </div>
+  </div>
+  <div id="ilgpu" class="section-black fade-load fadeable">
+    <h1 class="text-white">Contributions</h1>
+    <h2><a class="clickable text-link" href="https://github.com/m4rs-mt/ILGPU" target="_blank">ILGPU</a></h2>
+    <p class="text-white">
+      ILGPU is a .NET library that allows programmers to write GPU accelerated code
+      without resorting to low-level languages like OpenCL C or CUDA C. I have
+      contributed a miniscule amount to this library, but I wanted to include it here as
+      it's a very cool project and the devs are very kind and welcoming. I encourage you
+      to check it out and contribute! Read more about it in the
+      <a class="clickable text-link" href="https://github.com/m4rs-mt/ILGPU#readme" target="_blank">README.md</a>.
+    </p>
+  </div>
+  <script src="../main.js"></script>
+</body>
+
 </html>
