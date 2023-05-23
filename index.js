@@ -3,6 +3,14 @@ import { startFadeProcessor } from "./fade.js";
 function main() {
   startNamePopulator();
   addGreetingSubmitListener();
+  addMobileNavListener();
+}
+
+function addMobileNavListener() {
+  const navOpen = document.querySelector("#nav-mobile-icon");
+  navOpen.addEventListener("click", () => {
+    document.querySelector("#nav-mobile-side").classList.toggle("nav-hidden");
+  });
 }
 
 function addGreetingSubmitListener() {

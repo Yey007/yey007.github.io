@@ -4,6 +4,7 @@
 
 <head>
   <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
     About
   </title>
@@ -11,8 +12,24 @@
 </head>
 
 <body>
-  <nav>
-    <a class="clickable text-white" href="./" id="home">home</a>
+  <nav id="nav-desktop">
+    <a class="clickable text-white" href="./">home</a>
+    <a class="clickable text-white" href="../software/">software</a>
+    <a class="clickable text-white" href="../film/">film</a>
+    <a class="clickable text-white" href="../contact/">contact</a>
+  </nav>
+  <nav id="nav-mobile-top" class="text-white">
+    <svg id="nav-mobile-icon" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2"
+      viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M4 6l16 0"></path>
+      <path d="M4 12l16 0"></path>
+      <path d="M4 18l16 0"></path>
+    </svg>
+  </nav>
+  <nav id="nav-mobile-side" class="nav-hidden">
+    <a class="clickable text-white" href="./">home</a>
     <a class="clickable text-white" href="../software/">software</a>
     <a class="clickable text-white" href="../film/">film</a>
     <a class="clickable text-white" href="../contact/">contact</a>

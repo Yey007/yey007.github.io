@@ -11,3 +11,10 @@
   border: none;
   margin: 10% 10% 10% 40px;
 }
+
+#ytlogo {
+  width: auto;
+  height: 40px;
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
