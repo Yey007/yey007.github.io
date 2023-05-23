@@ -7,3 +7,19 @@
   margin-right: 3px;
   margin-left: -4px;
 }
+
+#projects {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#githublink {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px;
+}
+
+#githublogo {
+  width: 3rem;
+  aspect-ratio: 1;
+}
