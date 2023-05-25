@@ -3,19 +3,14 @@ import { startFadeProcessor } from "./fade.js";
 function main() {
   startNamePopulator();
   addGreetingSubmitListener();
-  addMobileNavListener();
-}
-
-function addMobileNavListener() {
-  const navOpen = document.querySelector("#nav-mobile-icon");
-  navOpen.addEventListener("click", () => {
-    document.querySelector("#nav-mobile-side").classList.toggle("nav-hidden");
-  });
 }
 
 function addGreetingSubmitListener() {
   const greetingForm = document.querySelector("#name-form");
-  greetingForm.addEventListener("submit", startFadeProcessor);
+  greetingForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    startFadeProcessor();
+  });
 }
 
 function startNamePopulator() {

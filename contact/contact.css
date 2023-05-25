@@ -1,5 +1,8 @@
+main {
+  font-size: 1.5rem;
+}
+
 #contact-desc {
-  font-size: 20px;
-  margin-left: 50px;
-  margin-top: 70px;
+  margin-top: 2rem;
+  width: 35rem;
 }

@@ -1,0 +1,16 @@
+#name-in {
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid white;
+  min-width: 20rem;
+  font-size: 2rem;
+}
+
+.intro-section {
+  padding-bottom: 4rem;
+}
+
+.intro-section h1 {
+  margin-bottom: 0.5rem;
+}

@@ -1,20 +1,21 @@
 #worth-the-risk-package {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
 }
 
 #worth-the-risk {
   flex: 1;
 }
 
-#vid {
-  border: none;
-  margin: 10% 10% 10% 40px;
+#vid-container {
+  flex: 1;
 }
 
-#ytlogo {
-  width: auto;
-  height: 40px;
-  margin-left: 20px;
-  margin-bottom: 5px;
+#vid {
+  border: none;
+}
+
+#youtubelogo {
+  height: 2.5rem;
 }

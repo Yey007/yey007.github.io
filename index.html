@@ -4,21 +4,23 @@
 
 <head>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="home.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
     About
   </title>
-  <script type="module" src="./index.js" defer></script>
+  <script type="module" src="home.js" defer></script>
+  <script type="module" src="navbar.js" defer></script>
 </head>
 
 <body>
   <nav id="nav-desktop">
-    <a class="clickable text-white" href="./">home</a>
-    <a class="clickable text-white" href="../software/">software</a>
-    <a class="clickable text-white" href="../film/">film</a>
-    <a class="clickable text-white" href="../contact/">contact</a>
+    <a class="clickable" href="./">home</a>
+    <a class="clickable" href="../software/">software</a>
+    <a class="clickable" href="../film/">film</a>
+    <a class="clickable" href="../contact/">contact</a>
   </nav>
-  <nav id="nav-mobile-top" class="text-white">
+  <nav id="nav-mobile-top">
     <svg id="nav-mobile-icon" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2"
       viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
       stroke-linejoin="round">
@@ -29,22 +31,23 @@
     </svg>
   </nav>
   <nav id="nav-mobile-side" class="nav-hidden">
-    <a class="clickable text-white" href="./">home</a>
-    <a class="clickable text-white" href="../software/">software</a>
-    <a class="clickable text-white" href="../film/">film</a>
-    <a class="clickable text-white" href="../contact/">contact</a>
+    <a class="clickable" href="./">home</a>
+    <a class="clickable" href="../software/">software</a>
+    <a class="clickable" href="../film/">film</a>
+    <a class="clickable" href="../contact/">contact</a>
   </nav>
   <main>
-    <form onsubmit="return false;" autocomplete="off" spellcheck="false"
-      class="section-black text-white fadeable fade-in" id="name-form">
-      <h1>Hello, what's your name?</h1>
-      <input autocomplete="off" class="text-white" id="name-in" type="text">
-    </form>
-    <div id="form-enter" class="section-black text-white fadeable">
+    <section class="fadeable fade-in intro-section">
+      <form autocomplete="off" spellcheck="false" id="name-form">
+        <h1>Hello, what's your name?</h1>
+        <input autocomplete="off" id="name-in" type="text">
+      </form>
+    </section>
+    <section class="fadeable intro-section">
       <h1 id="result">Welcome, human.</h1>
       <h1>Let's get to know each other.</h1>
-    </div>
-    <div id="about" class="section-black text-white">
+    </section>
+    <section class="half-text">
       <h1 class="fadeable">I'll go first...</h1>
       <p class="fadeable">
         Hello! My name is Utku Melemetci. I'm an amateur programmer and filmmaker.
@@ -103,7 +106,7 @@
         If you have any questions, you can contact me through one of the methods listed
         in the contacts page. I don't know if I can help, but I can try. Thanks for reading!
       </p>
-    </div>
+    </section>
   </main>
 </body>
 

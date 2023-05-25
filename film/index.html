@@ -5,50 +5,77 @@
 <head>
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="film.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
     Film
   </title>
   <script type="module" src="../autofade.js" defer></script>
+  <script type="module" src="../navbar.js" defer></script>
 </head>
 
 <body>
-  <nav>
-    <a class="clickable text-white" href="../" id="home">home</a>
-    <a class="clickable text-white" href="../software/">software</a>
-    <a class="clickable text-white" href="../film/">film</a>
-    <a class="clickable text-white" href="../contact/">contact</a>
+  <nav id="nav-desktop">
+    <a class="clickable" href="../">home</a>
+    <a class="clickable" href="../software/">software</a>
+    <a class="clickable" href="../film/">film</a>
+    <a class="clickable" href="../contact/">contact</a>
   </nav>
-  <div id="worth-the-risk-package">
-    <div id="worth-the-risk" class="section-black">
-      <h1 class="text-white fadeable fade-load">Projects<a
-          href="https://www.youtube.com/channel/UCD6_3qbS5DG5qsRQHl9GCOg" target="_blank"><img id="ytlogo"
-            src="yt_icon_mono_dark.png" alt="YouTube icon"></a></h1>
-      <h2><a class="clickable text-link fadeable fade-load" href="https://www.youtube.com/watch?v=EfZ1lZZ25Wk&t=2s"
-          target="_blank">Worth The Risk</a></h2>
-      <p class="text-white fadeable fade-load">
-        Worth The Risk is my own short film about a man living in the (fictional) war
-        torn nation of Yaban. It was my first short film which I wrote and produced
-        over the course of a year (with a lot of help).
-      </p>
-      <p class="text-white fadeable fade-load">
-        Credits: <br>
-        Director - Utku Melemetci <br>
-        Co-director - Nayad Sefer <br>
-        Main character - Aykut Engin <br>
-        Ahmet - Hasan Tanilmis <br>
-        Amara - Busra Ucar <br>
-        Sagal Sniper and Gunman - Nayad Sefer <br>
-        President - Arek Melemetci <br>
-        Screenplay and Post prod. - Utku Melemetci <br>
-        <br>
-        Special thanks: <br>
-        Beril Afsar Melemetci <br>
-        Selin Atasoy
-      </p>
+  <nav id="nav-mobile-top">
+    <svg id="nav-mobile-icon" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2"
+      viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M4 6l16 0"></path>
+      <path d="M4 12l16 0"></path>
+      <path d="M4 18l16 0"></path>
+    </svg>
+  </nav>
+  <nav id="nav-mobile-side" class="nav-hidden">
+    <a class="clickable" href="../">home</a>
+    <a class="clickable" href="../software/">software</a>
+    <a class="clickable" href="../film/">film</a>
+    <a class="clickable" href="../contact/">contact</a>
+  </nav>
+  <main>
+    <div class="fadeable textlogo">
+      <h1 class="textlogo-text">
+        Projects
+      </h1>
+      <a href="https://www.youtube.com/channel/UCD6_3qbS5DG5qsRQHl9GCOg">
+        <img src="yt_icon_mono_dark.png" alt="Youtube icon" id="youtubelogo" />
+      </a>
     </div>
-    <iframe id="vid" width="560" height="315" src="https://www.youtube.com/embed/EfZ1lZZ25Wk"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
+    <div id="worth-the-risk-package">
+      <div id="worth-the-risk">
+        <h2><a class="clickable text-link fadeable" href="https://www.youtube.com/watch?v=EfZ1lZZ25Wk&t=2s">Worth The
+            Risk</a></h2>
+        <p class="text-white fadeable">
+          Worth The Risk is my own short film about a man living in the (fictional) war
+          torn nation of Yaban. It was my first short film which I wrote and produced
+          over the course of a year (with a lot of help).
+        </p>
+        <p class="text-white fadeable">
+          Credits: <br>
+          Director - Utku Melemetci <br>
+          Co-director - Nayad Sefer <br>
+          Main character - Aykut Engin <br>
+          Ahmet - Hasan Tanilmis <br>
+          Amara - Busra Ucar <br>
+          Sagal Sniper and Gunman - Nayad Sefer <br>
+          President - Arek Melemetci <br>
+          Screenplay and Post prod. - Utku Melemetci <br>
+          <br>
+          Special thanks: <br>
+          Beril Afsar Melemetci <br>
+          Selin Atasoy
+        </p>
+      </div>
+      <div id="vid-container">
+        <iframe id="vid" width="560" height="315" src="https://www.youtube.com/embed/EfZ1lZZ25Wk"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      </section>
+  </main>
 </body>
 
 </html>

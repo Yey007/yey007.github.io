@@ -1,25 +1,23 @@
-#inactive {
-  width: fit-content;
-}
-
-#info {
-  margin-bottom: 4px;
-  margin-right: 3px;
-  margin-left: -4px;
-}
-
-#projects {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-#githublink {
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 20px;
-}
-
 #githublogo {
-  width: 3rem;
-  aspect-ratio: 1;
+  height: 3rem;
+}
+
+.text-img-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  height: fit-content;
+  justify-content: flex-start;
+}
+
+.text-img-text {
+  flex: 1;
+}
+
+.text-img-img {
+  flex: 1;
+  height: 200px;
+  align-self: center;
+  object-fit: contain;
 }
