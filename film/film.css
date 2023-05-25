@@ -10,12 +10,24 @@
 
 #vid-container {
   flex: 1;
+  text-align: center;
+  margin-left: 2rem;
 }
 
 #vid {
   border: none;
+  margin: auto;
 }
 
 #youtubelogo {
   height: 2.5rem;
+}
+
+@media screen and (max-width: 1000px) {
+  #worth-the-risk-package {
+    flex-direction: column;
+  }
+  #vid-container {
+    margin-left: 0;
+  }
 }
