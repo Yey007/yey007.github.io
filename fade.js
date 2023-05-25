@@ -9,6 +9,7 @@ export function startFadeProcessor() {
 
   addVisibleToQueue(fadeQueue);
   addEventListener("scroll", () => addVisibleToQueue(fadeQueue));
+  addEventListener("resize", () => addVisibleToQueue(fadeQueue));
 
   setInterval(() => {
     if (fadeQueue.length > 0) {
