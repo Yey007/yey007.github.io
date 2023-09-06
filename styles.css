@@ -1,10 +1,10 @@
 @import "nav.css";
 @import "fade.css";
 @import "textlogo.css";
-@import "https://fonts.googleapis.com/css?family=Noto Sans";
+@import url("https://fonts.googleapis.com/css2?family=Noto Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 body {
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   background-color: black;
   margin: 0;
   padding: 0;
