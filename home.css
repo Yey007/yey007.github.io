@@ -2,7 +2,7 @@ body {
   overflow: hidden;
 }
 
-.container {
+.intro-container {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -17,32 +17,60 @@ body {
   font-weight: 200;
 }
 
-#color {
-  color: blueviolet;
-  font-weight: 300;
-  display: inline-block;
-
-  transform-origin: 50% 50% -40px;
-  translate: 0 0 -40px;
-  animation: 2s ease-in-out 0s infinite rotate;
+/* Some weird hack to stack the spans: https://stackoverflow.com/a/58360992 */
+.roll-container {
+  display: inline-grid;
+  grid-template: 1fr / 1fr;
+  place-items: left;
 }
 
-@keyframes rotate {
+.roll-container > * {
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+}
+
+#roll-out {
+  display: inline-block;
+  transform-origin: 50% 50% -40px;
+  animation: 0.5s ease-in-out 0s forwards rotate-out;
+  z-index: 1;
+}
+
+#roll-in {
+  display: inline-block;
+  transform-origin: 50% 50% -40px;
+  animation: 0.5s ease-in-out 0s forwards rotate-in;
+  opacity: 0;
+  z-index: 2;
+}
+
+.emphasis {
+  font-weight: 300;
+}
+
+#color-out {
+  color: blueviolet;
+}
+
+#color-in {
+  color: orange;
+}
+
+@keyframes rotate-out {
   0% {
     transform: perspective(500px) translateZ(-40px) rotateX(0deg);
     opacity: 1;
   }
-  25% {
+  100% {
     transform: perspective(500px) translateZ(-40px) rotateX(90deg);
     opacity: 0;
   }
-  50% {
-    transform: perspective(500px) translateZ(-40px) rotateX(90deg);
+}
+
+@keyframes rotate-in {
+  0% {
+    transform: perspective(500px) translateZ(-40px) rotateX(-90deg);
     opacity: 0;
-  }
-  75% {
-    transform: perspective(500px) translateZ(-40px) rotateX(0deg);
-    opacity: 1;
   }
   100% {
     transform: perspective(500px) translateZ(-40px) rotateX(0deg);
