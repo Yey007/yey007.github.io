@@ -7,7 +7,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: left;
+  padding-left: 6rem;
 }
 
 .intro {
@@ -18,62 +19,53 @@ body {
 }
 
 /* Some weird hack to stack the spans: https://stackoverflow.com/a/58360992 */
-.roll-container {
+#roll-container {
   display: inline-grid;
   grid-template: 1fr / 1fr;
   place-items: left;
 }
 
-.roll-container > * {
+#roll-container > * {
   grid-column: 1 / 1;
   grid-row: 1 / 1;
 }
 
-#roll-out {
+.rollable {
   display: inline-block;
   transform-origin: 50% 50% -40px;
-  animation: 0.5s ease-in-out 0s forwards rotate-out;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.roll-out {
+  transform: perspective(500px) translateZ(-40px) rotateX(90deg);
+  opacity: 0;
   z-index: 1;
 }
 
-#roll-in {
-  display: inline-block;
-  transform-origin: 50% 50% -40px;
-  animation: 0.5s ease-in-out 0s forwards rotate-in;
-  opacity: 0;
+.roll-in {
+  transform: perspective(500px) translateZ(-40px) rotateX(0deg);
+  opacity: 1;
   z-index: 2;
 }
 
-.emphasis {
-  font-weight: 300;
+.hidden {
+  transform: perspective(500px) translateZ(-40px) rotateX(-90deg);
+  opacity: 0;
+  transition: none;
 }
 
-#color-out {
+.emphasis {
+  font-weight: 400;
+}
+
+#engineer {
   color: blueviolet;
 }
 
-#color-in {
+#programmer {
   color: orange;
 }
 
-@keyframes rotate-out {
-  0% {
-    transform: perspective(500px) translateZ(-40px) rotateX(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: perspective(500px) translateZ(-40px) rotateX(90deg);
-    opacity: 0;
-  }
-}
-
-@keyframes rotate-in {
-  0% {
-    transform: perspective(500px) translateZ(-40px) rotateX(-90deg);
-    opacity: 0;
-  }
-  100% {
-    transform: perspective(500px) translateZ(-40px) rotateX(0deg);
-    opacity: 1;
-  }
+#roboticist {
+  color: green;
 }
