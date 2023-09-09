@@ -1,4 +1,6 @@
 const allWords = document.getElementById("roll-container").children;
+
+// TODO: load from session storage (might require generating html from js instead)
 let lastRolledOutIndex = allWords.length - 1; // last element
 
 function next() {

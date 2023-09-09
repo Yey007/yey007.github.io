@@ -1,14 +1,41 @@
-body {
-  overflow: hidden;
+.main-container {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  height: calc(100vh - 10rem);
+  display: flex;
 }
 
 .intro-container {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: left;
   padding-left: 6rem;
+
+  flex-grow: 3;
+  flex-basis: 0;
+}
+
+.extras-container {
+  flex-grow: 2;
+  flex-basis: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.extras-container ul {
+  list-style-type: "🡒 ";
+  padding: 0;
+  margin: 0;
+  height: min-content;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  margin-right: 4rem;
+}
+
+.extras-container ul li {
+  margin-top: 2rem;
 }
 
 .intro {
@@ -18,6 +45,7 @@ body {
   font-weight: 200;
 }
 
+/* TODO: mobile :| */
 /* Some weird hack to stack the spans: https://stackoverflow.com/a/58360992 */
 #roll-container {
   display: inline-grid;
