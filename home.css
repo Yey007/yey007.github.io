@@ -38,13 +38,12 @@ body {
   }
 }
 
-@media screen and (min-width: 600px) and (max-width: 1500px) {
+@media screen and (min-width: 600px) and (max-width: 1300px) {
   .main-container {
     display: flex;
     flex-direction: column;
     padding-top: 5rem;
-    padding-bottom: 5rem;
-    height: calc(100vh - 10rem);
+    height: calc(100vh - 5rem);
     justify-content: center;
   }
 
@@ -77,7 +76,49 @@ body {
   }
 }
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1300px) and (max-width: 1600px) {
+  .main-container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    height: calc(100vh - 10rem);
+    display: flex;
+  }
+  .intro-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding-left: 4rem;
+
+    flex-grow: 3;
+    flex-basis: 0;
+  }
+  .extras-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    flex-grow: 2;
+    flex-basis: 0;
+  }
+  .extras-container ul {
+    list-style-type: "🡒 ";
+    padding: 0;
+    margin: 0;
+    height: min-content;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    margin-right: 4rem;
+  }
+  .extras-container ul li {
+    margin-top: 2rem;
+  }
+  .intro {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (min-width: 1600px) {
   .main-container {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -140,24 +181,24 @@ body {
 
 .rollable {
   display: inline-block;
-  transform-origin: 50% 50% -40px;
+  transform-origin: 50% 50% -0.5em;
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .rolled-out {
-  transform: perspective(500px) translateZ(-40px) rotateX(90deg);
+  transform: perspective(500px) translateZ(-0.5em) rotateX(90deg);
   opacity: 0;
   z-index: 1;
 }
 
 .rolled-in {
-  transform: perspective(500px) translateZ(-40px) rotateX(0deg);
+  transform: perspective(500px) translateZ(-0.5em) rotateX(0deg);
   opacity: 1;
   z-index: 2;
 }
 
 .hidden {
-  transform: perspective(500px) translateZ(-40px) rotateX(-90deg);
+  transform: perspective(500px) translateZ(-0.5em) rotateX(-90deg);
   opacity: 0;
   transition: none;
 }
@@ -184,4 +225,23 @@ body {
 
 #videographer {
   color: #3b8358;
+}
+
+#prefix {
+  transition: width 0.5s ease-in-out;
+  display: inline-block;
+  word-wrap: normal;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  vertical-align: bottom;
+  mask-image: linear-gradient(to left, transparent, black 0.25ch);
+}
+
+.prefix-a {
+  width: 1ch;
+}
+
+.prefix-an {
+  width: 2ch;
 }

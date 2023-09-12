@@ -1,6 +1,6 @@
 const allWords = document.getElementById("roll-container").children;
+const prefix = document.getElementById("prefix");
 
-// TODO: load from session storage (might require generating html from js instead)
 let lastRolledOutIndex = allWords.length - 1; // last element
 
 function next() {
@@ -13,6 +13,18 @@ function next() {
   toRollIn.classList.replace("hidden", "rolled-in");
 
   lastRolledOutIndex = (lastRolledOutIndex + 1) % allWords.length;
+
+  if (isVowel(toRollIn.innerText[0])) {
+    prefix.classList.remove("prefix-a");
+    prefix.classList.add("prefix-an");
+  } else {
+    prefix.classList.remove("prefix-an");
+    prefix.classList.add("prefix-a");
+  }
+}
+
+function isVowel(char) {
+  return "aeiou".includes(char.toLowerCase());
 }
 
 setInterval(next, 3000);
