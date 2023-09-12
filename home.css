@@ -181,24 +181,24 @@ body {
 
 .rollable {
   display: inline-block;
-  transform-origin: 50% 50% -0.5em;
+  transform-origin: 50% 50% -0.6em;
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .rolled-out {
-  transform: perspective(500px) translateZ(-0.5em) rotateX(90deg);
+  transform: perspective(500px) translateZ(-0.6em) rotateX(90deg);
   opacity: 0;
   z-index: 1;
 }
 
 .rolled-in {
-  transform: perspective(500px) translateZ(-0.5em) rotateX(0deg);
+  transform: perspective(500px) translateZ(-0.6em) rotateX(0deg);
   opacity: 1;
   z-index: 2;
 }
 
 .hidden {
-  transform: perspective(500px) translateZ(-0.5em) rotateX(-90deg);
+  transform: perspective(500px) translateZ(-0.6em) rotateX(-90deg);
   opacity: 0;
   transition: none;
 }
