@@ -27,7 +27,7 @@ body {
 }
 
 .extras-container ul {
-  list-style-type: "\1F852  ";
+  list-style-type: disc;
 }
 
 @media screen and (max-width: 600px) {
