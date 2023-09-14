@@ -30,6 +30,30 @@ body {
   list-style-type: "\1F852  ";
 }
 
+@media screen and (max-width: 600px) {
+  .intro {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1300px) {
+  .intro {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1600px) {
+  .intro {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .intro {
+    font-size: 6rem;
+  }
+}
+
 @media screen and (max-width: 1300px) {
   .main-container {
     flex-direction: column;
@@ -51,19 +75,11 @@ body {
   }
 }
 
-@media screen and (max-width: 600px) {
-  .intro {
-    font-size: 3rem;
-  }
-}
-
-@media screen and (min-width: 600px) and (max-width: 1300px) {
-  .intro {
-    font-size: 4rem;
-  }
-}
-
 @media screen and (min-width: 1300px) {
+  .main-container {
+    flex-direction: row;
+  }
+
   .intro-container {
     justify-content: center;
     padding-left: 4rem;
@@ -71,10 +87,12 @@ body {
     flex-grow: 3;
     flex-basis: 0;
   }
+
   .extras-container {
     flex-grow: 2;
     flex-basis: 0;
   }
+
   .extras-container ul {
     padding: 0;
     margin: 0;
@@ -82,6 +100,7 @@ body {
     margin-bottom: 1rem;
     margin-right: 4rem;
   }
+
   .extras-container ul li {
     margin-top: 2rem;
   }
@@ -91,19 +110,11 @@ body {
   .extras-container ul {
     font-size: 1.25rem;
   }
-
-  .intro {
-    font-size: 5rem;
-  }
 }
 
 @media screen and (min-width: 1600px) {
   .extras-container ul {
     font-size: 1.5rem;
-  }
-
-  .intro {
-    font-size: 6rem;
   }
 }
 
