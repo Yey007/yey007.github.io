@@ -5,44 +5,18 @@ export function startFadeProcessor() {
     return;
   }
 
-  const fadeQueue = [];
-
-  addVisibleToQueue(fadeQueue);
-  addEventListener("scroll", () => addVisibleToQueue(fadeQueue));
-  addEventListener("resize", () => addVisibleToQueue(fadeQueue));
+  const fadeQueue = document.querySelectorAll(".fadeable").values();
 
   setInterval(() => {
-    if (fadeQueue.length > 0) {
-      fadeIn(fadeQueue.shift());
+    let next = fadeQueue.next();
+    if (!next.done) {
+      fadeIn(next.value);
     }
   }, 25);
 
   started = true;
 }
 
-function addVisibleToQueue(fadeQueue) {
-  const fadeElements = document.querySelectorAll(".fadeable");
-
-  for (const element of fadeElements) {
-    if (isVisible(element) && !isFadedIn(element)) {
-      fadeQueue.push(element);
-    }
-  }
-}
-
-function isVisible(el) {
-  var rect = el.getBoundingClientRect();
-  var elemTop = rect.top;
-
-  var isVisible = elemTop < window.innerHeight;
-
-  return isVisible;
-}
-
 function fadeIn(element) {
   element.classList.add("fade-in");
-}
-
-function isFadedIn(element) {
-  return element.classList.contains("fade-in");
 }

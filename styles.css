@@ -39,7 +39,7 @@ section {
 
 @media screen and (min-width: 800px) {
   .half-text {
-    max-width: 50%;
+    max-width: 75ch;
   }
 }
 
