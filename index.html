@@ -1,66 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="home.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <script type="module" src="navbar.js" defer></script>
+    <script type="module" src="home.js" defer></script>
+  </head>
 
-<head>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="home.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>
-    About
-  </title>
-  <script type="module" src="navbar.js" defer></script>
-  <script type="module" src="home.js" defer></script>
-</head>
-
-<body>
-  <nav id="nav-desktop">
-    <a class="clickable" href="./">home</a>
-    <a class="clickable" href="../software/">software</a>
-    <a class="clickable" href="../film/">film</a>
-    <a class="clickable" href="../contact/">contact</a>
-  </nav>
-  <nav id="nav-mobile-top">
-    <svg id="nav-mobile-icon" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2"
-      viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-      stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-      <path d="M4 6l16 0"></path>
-      <path d="M4 12l16 0"></path>
-      <path d="M4 18l16 0"></path>
-    </svg>
-  </nav>
-  <nav id="nav-mobile-side" class="nav-hidden">
-    <a class="clickable" href="./">home</a>
-    <a class="clickable" href="../software/">software</a>
-    <a class="clickable" href="../film/">film</a>
-    <a class="clickable" href="../contact/">contact</a>
-  </nav>
-  <div class="main-container">
-    <div class="intro-container">
-      <h1 class="intro">Hi! I'm Utku.</h1>
-      <h1 class="intro">I'm
-        <span id="prefix" class="prefix-a">an </span>
-        <div id="roll-container">
-          <span class="rollable rolled-in emphasis" id="programmer">programmer.</span>
-          <span class="rollable hidden emphasis" id="engineer">engineer.</span>
-          <span class="rollable hidden emphasis" id="filmmaker">filmmaker.</span>
-          <span class="rollable hidden emphasis" id="roboticist">roboticist.</span>
-          <span class="rollable rolled-out emphasis" id="maker">maker.</span>
-        </div>
-      </h1>
+  <body>
+    <nav id="nav-desktop">
+      <a class="clickable" href="./">home</a>
+      <a class="clickable" href="../software/">software</a>
+      <a class="clickable" href="../film/">film</a>
+      <a class="clickable" href="../contact/">contact</a>
+    </nav>
+    <nav id="nav-mobile-top">
+      <svg
+        id="nav-mobile-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon icon-tabler icon-tabler-menu-2"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M4 6l16 0"></path>
+        <path d="M4 12l16 0"></path>
+        <path d="M4 18l16 0"></path>
+      </svg>
+    </nav>
+    <nav id="nav-mobile-side" class="nav-hidden">
+      <a class="clickable" href="./">home</a>
+      <a class="clickable" href="../software/">software</a>
+      <a class="clickable" href="../film/">film</a>
+      <a class="clickable" href="../contact/">contact</a>
+    </nav>
+    <div class="main-container">
+      <div class="intro-container">
+        <h1 class="intro">Hi! I'm Utku.</h1>
+        <h1 class="intro">
+          I'm
+          <span id="prefix" class="prefix-a">an </span>
+          <div id="roll-container">
+            <span class="rollable rolled-in emphasis" id="programmer"
+              >programmer.</span
+            >
+            <span class="rollable hidden emphasis" id="engineer"
+              >engineer.</span
+            >
+            <span class="rollable hidden emphasis" id="filmmaker"
+              >filmmaker.</span
+            >
+            <span class="rollable hidden emphasis" id="roboticist"
+              >roboticist.</span
+            >
+            <span class="rollable rolled-out emphasis" id="maker">maker.</span>
+          </div>
+        </h1>
+      </div>
+      <div class="extras-container">
+        <ul>
+          <li>
+            <a class="clickable text-link" href="../software/"
+              >See the software</a
+            >
+            I've worked on
+          </li>
+          <li>
+            Or, if that's not your thing, you can
+            <a class="clickable text-link" href="../film/">view my films</a>
+          </li>
+          <li>
+            <a class="clickable text-link" href="../contact/">My contact</a> is
+            also available, if you just want to get to me
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="extras-container">
-      <ul>
-        <li><a class="clickable text-link" href="../software/">See the software</a> I've worked on</li>
-        <li>Or, if that's not your thing, you can <a class="clickable text-link" href="../film/">view my films</a></li>
-        <li><a class="clickable text-link" href="../contact/">My contact</a> is also available, if you just want to get
-          to me
-        </li>
-      </ul>
-    </div>
-  </div>
-</body>
-
-
+  </body>
 </html>

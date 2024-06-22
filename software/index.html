@@ -1,276 +1,368 @@
-<!DOCTYPE html>
-
+<!doctype html>
+<!-- TODO: reorder contributions (ILGPU first), improve ILGPU wording, add CEV to contributions, rewrite mc-computer, rewrite slider,
+add 3110 compiler -->
 <html lang="en">
+  <head>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="software.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Software</title>
+    <script type="module" src="../autofade.js" defer></script>
+    <script type="module" src="../navbar.js" defer></script>
+  </head>
 
-<head>
-  <link rel="stylesheet" href="../styles.css">
-  <link rel="stylesheet" href="software.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>
-    Software
-  </title>
-  <script type="module" src="../autofade.js" defer></script>
-  <script type="module" src="../navbar.js" defer></script>
-</head>
-
-<body>
-  <nav id="nav-desktop">
-    <a class="clickable" href="../">home</a>
-    <a class="clickable" href="../software/">software</a>
-    <a class="clickable" href="../film/">film</a>
-    <a class="clickable" href="../contact/">contact</a>
-  </nav>
-  <nav id="nav-mobile-top">
-    <svg id="nav-mobile-icon" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2"
-      viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-      stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-      <path d="M4 6l16 0"></path>
-      <path d="M4 12l16 0"></path>
-      <path d="M4 18l16 0"></path>
-    </svg>
-  </nav>
-  <nav id="nav-mobile-side" class="nav-hidden">
-    <a class="clickable" href="../">home</a>
-    <a class="clickable" href="../software/">software</a>
-    <a class="clickable" href="../film/">film</a>
-    <a class="clickable" href="../contact/">contact</a>
-  </nav>
-  <main>
-    <div class="fadeable textlogo">
-      <h1 class="textlogo-text">
-        Software
-      </h1>
-      <a href="https://github.com/Yey007">
-        <img src="GitHub-Mark-Light.png" alt="Github logo" id="githublogo" />
-      </a>
-    </div>
-    <section>
-      <h2 class="fadeable">Personal Projects</h2>
-      <section id="slider">
-        <h3 class="fadeable">
-          Camera Slider Motorization
-        </h3>
-        <p class="fadeable half-text">
-          This one's still in the works, but I'm trying to motorize a camera slider
-          that I own. I'm using an Arduino and a stepper motor to move the slider, and Bézier
-          curves to generate smooth motion. To mount the stepper motor, belt, and Arduino,
-          I'm designing 3D parts using Fusion 360. Finally, I'm also building a Flutter
-          app to allow for easy control.
-        </p>
-        <p class="fadeable half-text">
-          What I love about this project is that it has pushed me to explore areas
-          I'm unfamiliar with and learn more. I hadn't properly worked in embedded
-          systems before this project, and that came with unique performance challenges,
-          like being unable to sample Bézier curves fast enough at higher microsteps.
-          This is the problem I'm currently working on.
-        </p>
-        <p class="fadeable half-text">
-          I also didn't have much CAD experience outside of the basics I learned in
-          a class. With the help of my friends, I got a lot better at not only CAD
-          but also mechanical and structural design.
-        </p>
-        <p class="fadeable half-text">
-          Finally, every stage of this project has involved a lot of math. From making
-          torque calculations while choosing a motor, to deriving the math for proper
-          zooming for the app (painful), to understanding Bézier curves, this project has
-          pushed me to use more math in my programming work. So far, it has taken me
-          to amazing places, and I will undoubtedly learn even more.
-        </p>
+  <body>
+    <nav id="nav-desktop">
+      <a class="clickable" href="../">home</a>
+      <a class="clickable" href="../software/">software</a>
+      <a class="clickable" href="../film/">film</a>
+      <a class="clickable" href="../contact/">contact</a>
+    </nav>
+    <nav id="nav-mobile-top">
+      <svg
+        id="nav-mobile-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon icon-tabler icon-tabler-menu-2"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M4 6l16 0"></path>
+        <path d="M4 12l16 0"></path>
+        <path d="M4 18l16 0"></path>
+      </svg>
+    </nav>
+    <nav id="nav-mobile-side" class="nav-hidden">
+      <a class="clickable" href="../">home</a>
+      <a class="clickable" href="../software/">software</a>
+      <a class="clickable" href="../film/">film</a>
+      <a class="clickable" href="../contact/">contact</a>
+    </nav>
+    <main>
+      <div class="fadeable textlogo">
+        <h1 class="textlogo-text">Software</h1>
+        <a href="https://github.com/Yey007">
+          <img src="GitHub-Mark-Light.png" alt="Github logo" id="githublogo" />
+        </a>
+      </div>
+      <section>
+        <h2 class="fadeable">Personal Projects</h2>
+        <section id="slider">
+          <h3 class="fadeable">Camera Slider Motorization</h3>
+          <p class="fadeable half-text">
+            This one's still in the works, but I'm trying to motorize a camera
+            slider that I own. I'm using an Arduino and a stepper motor to move
+            the slider, and Bézier curves to generate smooth motion. To mount
+            the stepper motor, belt, and Arduino, I'm designing 3D parts using
+            Fusion 360. Finally, I'm also building a Flutter app to allow for
+            easy control.
+          </p>
+          <p class="fadeable half-text">
+            What I love about this project is that it has pushed me to explore
+            areas I'm unfamiliar with and learn more. I hadn't properly worked
+            in embedded systems before this project, and that came with unique
+            performance challenges, like being unable to sample Bézier curves
+            fast enough at higher microsteps. This is the problem I'm currently
+            working on.
+          </p>
+          <p class="fadeable half-text">
+            I also didn't have much CAD experience outside of the basics I
+            learned in a class. With the help of my friends, I got a lot better
+            at not only CAD but also mechanical and structural design.
+          </p>
+          <p class="fadeable half-text">
+            Finally, every stage of this project has involved a lot of math.
+            From making torque calculations while choosing a motor, to deriving
+            the math for proper zooming for the app (painful), to understanding
+            Bézier curves, this project has pushed me to use more math in my
+            programming work. So far, it has taken me to amazing places, and I
+            will undoubtedly learn even more.
+          </p>
+        </section>
+        <section id="mc-computer" class="half-text">
+          <div class="fadeable textlogo">
+            <a href="https://github.com/Yey007/mc-computer-emulator">
+              <h3 class="clickable textlogo-text">mc-computer</h3>
+            </a>
+            <a href="https://github.com/Yey007/mc-computer-emulator">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-link"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M9 15l6 -6"></path>
+                <path
+                  d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464"
+                ></path>
+                <path
+                  d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463"
+                ></path>
+              </svg>
+            </a>
+          </div>
+          <p class="fadeable">
+            Another work-in-progress. Basically, I'm trying to build a very
+            simple computer with my own architecture in Minecraft. So far, I've
+            come up with the architecture, built an emulator for it in Rust, and
+            built the clock and a couple interactions of the ROM module. I'm
+            currently working on compacting the ROM and building the RAM.
+          </p>
+        </section>
+        <section id="ftc-score">
+          <div class="fadeable textlogo">
+            <a href="https://github.com/Yey007/ftc-score">
+              <h3 class="clickable textlogo-text">ftc-score</h3>
+            </a>
+            <a href="https://github.com/Yey007/ftc-score">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-link"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M9 15l6 -6"></path>
+                <path
+                  d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464"
+                ></path>
+                <path
+                  d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463"
+                ></path>
+              </svg>
+            </a>
+          </div>
+          <p class="fadeable half-text">
+            ftc-score is the product of a
+            <a
+              href="https://github.com/Yey007/ftc-score/blob/main/paper/paper.pdf"
+              class="clickable text-link"
+              >research paper</a
+            >
+            I wrote on scoring FIRST Tech Challenge games using computer vision.
+            It doesn't quite work, but it does do a few things like detecting
+            the field and tracking larger game elements well. You can read the
+            paper if you want to know more about the program's strengths and
+            weaknesses. I don't know if I'll ever come back to improve it, but I
+            hope it can serve as a good base for future development.
+          </p>
+        </section>
+        <section id="transcribe" class="half-text">
+          <div class="fadeable textlogo">
+            <a href="https://github.com/Yey007/TranscriberBot">
+              <h3 class="clickable textlogo-text">TranscriberBot</h3>
+            </a>
+            <a href="https://github.com/Yey007/TranscriberBot">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-link"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M9 15l6 -6"></path>
+                <path
+                  d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464"
+                ></path>
+                <path
+                  d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463"
+                ></path>
+              </svg>
+            </a>
+          </div>
+          <p class="fadeable">
+            TranscriberBot is a Discord bot written in TypeScript that uses the
+            IBM Watson Speech-to-Text API to provide live transcription of voice
+            channels. My biggest learning from this project wasn't really how to
+            use Discord.js or Watson, but rather how to set up CI/CD. I built a
+            full pipeline using GitHub Actions and Docker deploying to my old
+            laptop. It can even run integration tests by launching another bot
+            and testing that interactions work correctly.
+          </p>
+        </section>
       </section>
-      <section id="mc-computer" class="half-text">
-        <div class="fadeable textlogo">
-          <a href="https://github.com/Yey007/mc-computer-emulator">
-            <h3 class="clickable textlogo-text">
-              mc-computer
-            </h3>
-          </a>
-          <a href="https://github.com/Yey007/mc-computer-emulator">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24"
-              viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-              <path d="M9 15l6 -6"></path>
-              <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464"></path>
-              <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463"></path>
-            </svg>
-          </a>
-        </div>
-        <p class="fadeable">
-          Another work-in-progress. Basically, I'm trying to build a very simple computer with
-          my own architecture in Minecraft. So far, I've come up with the architecture,
-          built an emulator for it in Rust, and built the clock and a couple interactions
-          of the ROM module. I'm currently working on compacting the ROM and building the RAM.
-        </p>
+      <section>
+        <h2 class="fadeable">Contributions</h2>
+        <section id="ypp" class="half-text">
+          <div class="fadeable textlogo">
+            <a href="https://www.youthpassionproject.org/">
+              <h3 class="clickable textlogo-text">Youth Passion Project</h3>
+            </a>
+            <a href="https://www.youthpassionproject.org/">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-link"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M9 15l6 -6"></path>
+                <path
+                  d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464"
+                ></path>
+                <path
+                  d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463"
+                ></path>
+              </svg>
+            </a>
+          </div>
+          <p class="fadeable">
+            I'm the Director of Technology for a non-profit organization called
+            the Youth Passion Project (YPP), which offers free, online courses
+            to kids grades 1-8 taught by high schoolers. I teach once in a
+            while, but my primary role at the Project is to develop and maintain
+            the
+            <a
+              class="clickable text-link"
+              href="https://ypp-portal-prod.web.app/"
+              >new web portal</a
+            >. The portal is designed to streamline interactions between Project
+            administration, instructors, students, and their parents by
+            providing a single platform for everything YPP.
+          </p>
+          <p class="fadeable">
+            The portal is built with client-side React and Firebase. In
+            hindsight, the choice of Firebase (and especially Firestore) is
+            slightly questionable as the data is highly relational, but the
+            portal had to be extremely cheap to run and there weren't many free
+            options out there. Client-rendered React was chosen for a similar
+            reason.
+          </p>
+          <p class="fadeable">
+            Being on a larger project for almost three years working with lots
+            of people has taught me a lot. I learned how to better set deadlines
+            and stick to them, how to mitigate (or live with?) technical debt
+            and legacy code, and how to incorporate feedback from actual users.
+            Of course, I also learned about building web apps, automated
+            testing, etc.From a technical and non-technical standpoint, my time
+            at YPP has been extremely valuable to my growth as a developer.
+          </p>
+        </section>
+        <section id="ilgpu" class="half-text">
+          <div class="fadeable textlogo">
+            <a href="https://github.com/m4rs-mt/ILGPU">
+              <h3 class="clickable textlogo-text">ILGPU</h3>
+            </a>
+            <a href="https://github.com/m4rs-mt/ILGPU">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-link"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M9 15l6 -6"></path>
+                <path
+                  d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464"
+                ></path>
+                <path
+                  d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463"
+                ></path>
+              </svg>
+            </a>
+          </div>
+          <p class="fadeable">
+            ILGPU is a .NET library that allows developers to write GPU
+            accelerated code without resorting to low-level APIs like OpenCL or
+            CUDA. I have only contributed a little to this library, but I wanted
+            to include it here as it's a very cool project and the developers
+            are very kind and welcoming. I encourage everyone to check it out
+            and contribute! Read more about it in the
+            <a
+              class="clickable text-link"
+              href="https://github.com/m4rs-mt/ILGPU#readme"
+              >README</a
+            >.
+          </p>
+        </section>
+        <section id="ftc" class="half-text">
+          <div class="fadeable textlogo">
+            <a href="https://www.scarsdalerobotics.com/">
+              <h3 class="clickable textlogo-text">
+                FIRST Tech Challenge Team 12331
+              </h3>
+            </a>
+            <a href="https://www.scarsdalerobotics.com/">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-link"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M9 15l6 -6"></path>
+                <path
+                  d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464"
+                ></path>
+                <path
+                  d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463"
+                ></path>
+              </svg>
+            </a>
+          </div>
+          <p class="fadeable">
+            I was a programmer for my high school's
+            <a
+              class="clickable text-link"
+              href="https://www.firstinspires.org/robotics/ftc"
+              >FIRST Tech Challenge (FTC)</a
+            >
+            robotics team, team 12331 Scarsdale Robo Raiders, for two years and
+            programming director for another two. I learned a whole bunch during
+            my time on the team, including computer vision and basic control
+            theory. I also got to apply some of the linear algebra I learned in
+            class.
+          </p>
+          <p class="fadeable">
+            Of course, I also learned a lot about teamwork and met an insane
+            number of really nice people, both on and off my team, some of whom
+            I'm glad I can call friends. The FIRST community is simply amazing,
+            and I wouldn't trade my time in FTC for anything. If you have a team
+            nearby, I highly recommend at least giving it a try.
+          </p>
+        </section>
       </section>
-      <section id="ftc-score">
-        <div class="fadeable textlogo">
-          <a href="https://github.com/Yey007/ftc-score">
-            <h3 class="clickable textlogo-text">
-              ftc-score
-            </h3>
-          </a>
-          <a href="https://github.com/Yey007/ftc-score">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24"
-              viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-              <path d="M9 15l6 -6"></path>
-              <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464"></path>
-              <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463"></path>
-            </svg>
-          </a>
-        </div>
-        <p class="fadeable half-text">
-          ftc-score is the product of a <a href="https://github.com/Yey007/ftc-score/blob/main/paper/paper.pdf"
-            class="clickable text-link">research paper</a>
-          I wrote on scoring FIRST Tech Challenge games using computer vision. It
-          doesn't quite work, but it does do a few things like detecting the field
-          and tracking larger game elements well. You can read the paper if you want
-          to know more about the program's strengths and weaknesses. I don't know
-          if I'll ever come back to improve it, but I hope it can serve as a good base
-          for future development.
-        </p>
-      </section>
-      <section id="transcribe" class="half-text">
-        <div class="fadeable textlogo">
-          <a href="https://github.com/Yey007/TranscriberBot">
-            <h3 class="clickable textlogo-text">
-              TranscriberBot
-            </h3>
-          </a>
-          <a href="https://github.com/Yey007/TranscriberBot">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24"
-              viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-              <path d="M9 15l6 -6"></path>
-              <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464"></path>
-              <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463"></path>
-            </svg>
-          </a>
-        </div>
-        <p class="fadeable">
-          TranscriberBot is a Discord bot written in TypeScript that uses the IBM
-          Watson Speech-to-Text API to provide live transcription of voice channels.
-          My biggest learning from this project wasn't really how to use Discord.js
-          or Watson, but rather how to set up CI/CD. I built a full pipeline using
-          GitHub Actions and Docker deploying to my old laptop. It can even
-          run integration tests by launching another bot and testing that interactions
-          work correctly.
-        </p>
-      </section>
-    </section>
-    <section>
-      <h2 class="fadeable">Contributions</h2>
-      <section id="ypp" class="half-text">
-        <div class="fadeable textlogo">
-          <a href="https://www.youthpassionproject.org/">
-            <h3 class="clickable textlogo-text">
-              Youth Passion Project
-            </h3>
-          </a>
-          <a href="https://www.youthpassionproject.org/">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24"
-              viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-              <path d="M9 15l6 -6"></path>
-              <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464"></path>
-              <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463"></path>
-            </svg>
-          </a>
-        </div>
-        <p class="fadeable">
-          I'm the Director of Technology for a non-profit organization called the
-          Youth Passion Project (YPP), which offers free, online courses to kids grades 1-8
-          taught by high schoolers. I teach once in a while, but my primary role at
-          the Project is to develop and maintain the
-          <a class="clickable text-link" href="https://ypp-portal-prod.web.app/">new web portal</a>. The portal is
-          designed to streamline interactions between Project administration, instructors,
-          students, and their parents by providing a single platform for everything YPP.
-        </p>
-        <p class="fadeable">
-          The portal is built with client-side React and Firebase. In hindsight,
-          the choice of Firebase (and especially Firestore) is slightly questionable as the data is highly relational,
-          but the portal had to be extremely cheap to run and there weren't many free
-          options out there. Client-rendered React was chosen for a similar reason.
-        </p>
-        <p class="fadeable">
-          Being on a larger project for almost three years working with lots of people
-          has taught me a lot. I learned how to better set deadlines and stick to them,
-          how to mitigate (or live with?) technical debt and legacy code,
-          and how to incorporate feedback from actual users. Of course, I also learned
-          about building web apps, automated testing, etc.From a technical and
-          non-technical standpoint, my time at YPP has been extremely valuable
-          to my growth as a developer.
-        </p>
-      </section>
-      <section id="ilgpu" class="half-text">
-        <div class="fadeable textlogo">
-          <a href="https://github.com/m4rs-mt/ILGPU">
-            <h3 class="clickable textlogo-text">
-              ILGPU
-            </h3>
-          </a>
-          <a href="https://github.com/m4rs-mt/ILGPU">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24"
-              viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-              <path d="M9 15l6 -6"></path>
-              <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464"></path>
-              <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463"></path>
-            </svg>
-          </a>
-        </div>
-        <p class="fadeable">
-          ILGPU is a .NET library that allows developers to write GPU accelerated code
-          without resorting to low-level APIs like OpenCL or CUDA. I have
-          only contributed a little to this library, but I wanted to include it here as
-          it's a very cool project and the developers are very kind and welcoming. I encourage everyone
-          to check it out and contribute! Read more about it in the
-          <a class="clickable text-link" href="https://github.com/m4rs-mt/ILGPU#readme">README</a>.
-        </p>
-      </section>
-      <section id="ftc" class="half-text">
-        <div class="fadeable textlogo">
-          <a href="https://www.scarsdalerobotics.com/">
-            <h3 class="clickable textlogo-text">
-              FIRST Tech Challenge Team 12331
-            </h3>
-          </a>
-          <a href="https://www.scarsdalerobotics.com/">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24"
-              viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-              <path d="M9 15l6 -6"></path>
-              <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464"></path>
-              <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463"></path>
-            </svg>
-          </a>
-        </div>
-        <p class="fadeable">
-          I was a programmer for my high school's
-          <a class="clickable text-link" href="https://www.firstinspires.org/robotics/ftc">FIRST Tech Challenge
-            (FTC)</a>
-          robotics team, team 12331 Scarsdale Robo Raiders, for two years and programming director
-          for another two. I learned a whole bunch during my time on the team, including
-          computer vision and basic control theory. I also got to apply some of the
-          linear algebra I learned in class.
-        </p>
-        <p class="fadeable">
-          Of course, I also learned a lot about teamwork and met an insane number of really
-          nice people, both on and off my team, some of whom I'm glad I can call friends.
-          The FIRST community is simply amazing, and I wouldn't trade my time in FTC for anything.
-          If you have a team nearby, I highly recommend at least giving it a try.
-        </p>
-      </section>
-
-    </section>
-  </main>
-
-</body>
-
+    </main>
+  </body>
 </html>
