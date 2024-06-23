@@ -1,0 +1,51 @@
+---
+import DesktopNavLink from "./DesktopNavLink.astro";
+import MobileNavLink from "./MobileNavLink.astro";
+---
+
+<nav class="h-18 fixed left-0 right-0 z-10 hidden w-full bg-dark-metal sm:flex">
+    <DesktopNavLink name="home" to="/" />
+    <DesktopNavLink name="software" to="/software" />
+    <DesktopNavLink name="film" to="/file" />
+    <DesktopNavLink name="contact" to="/contact" />
+</nav>
+
+<nav
+    class="h-18 fixed left-0 right-0 z-10 box-border w-full border-b-4 border-b-light-metal bg-dark-metal sm:hidden"
+>
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        id="nav-mobile-icon"
+        class="h-18 w-18 p-5"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="white"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M4 6l18 0"></path>
+        <path d="M4 12l18 0"></path>
+        <path d="M4 18l18 0"></path>
+    </svg>
+</nav>
+
+<nav
+    id="nav-mobile-side"
+    class="animate-transform top-18 fixed left-0 right-0 z-10 h-screen w-fit -translate-x-full bg-dark-metal transition-transform duration-500 ease-in-out sm:hidden"
+>
+    <MobileNavLink name="home" to="/" />
+    <MobileNavLink name="software" to="/software" />
+    <MobileNavLink name="film" to="/file" />
+    <MobileNavLink name="contact" to="/contact" />
+</nav>
+
+<script>
+    const navOpen = document.querySelector("#nav-mobile-icon")!;
+    navOpen.addEventListener("click", () => {
+        document
+            .querySelector("#nav-mobile-side")!
+            .classList.toggle("-translate-x-full");
+    });
+</script>

@@ -1,0 +1,10 @@
+---
+interface Props {
+    name: string;
+    to: string;
+}
+
+const { name, to } = Astro.props;
+---
+
+<a class="text-ocean hover:text-light-sky" href={to}>{name}</a>

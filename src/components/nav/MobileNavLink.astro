@@ -1,0 +1,21 @@
+---
+interface Props {
+    name: string;
+    to: string;
+}
+
+const path = Astro.url.pathname;
+const { name, to } = Astro.props;
+---
+
+<a
+    class:list={[
+        "block pl-6 pr-8 pt-8 text-2xl text-white",
+        to === path
+            ? "underline decoration-neutral-500 decoration-0 underline-offset-8"
+            : "",
+    ]}
+    href={to}
+>
+    {name}
+</a>
