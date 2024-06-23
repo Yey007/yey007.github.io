@@ -1,7 +1,138 @@
 ---
+import IntroText from "../components/home/intro/IntroText.astro";
+import Link from "../components/nav/Link.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-    <main></main>
+<Layout title="home">
+    <main class="flex h-screen flex-col justify-center text-white xl:flex-row">
+        <div
+            class="flex flex-col pl-8 xl:flex-grow-[3] xl:basis-0 xl:justify-center xl:pl-16"
+        >
+            <IntroText>Hi! I'm Utku.</IntroText>
+            <IntroText>
+                I'm <span id="prefix" class="prefix-a">an </span>
+                <div
+                    class="inline-grid grid-cols-[1fr/1fr] font-light"
+                    id="roll-container"
+                >
+                    <span class="rollable rolled-in text-[#ffb01d]"
+                        >programmer.</span
+                    >
+                    <span class="rollable hide text-[slateblue]">engineer.</span
+                    >
+                    <span class="rollable hide text-[crimson]">filmmaker.</span>
+                    <span class="rollable hide text-[steelblue]"
+                        >roboticist.</span
+                    >
+                    <span class="rollable rolled-out text-[#3b8358]"
+                        >maker.</span
+                    >
+                </div>
+            </IntroText>
+        </div>
+        <div class="flex flex-col justify-center xl:flex-grow-[2] xl:basis-0">
+            <ul
+                class="xl list-disc px-12 pt-12 text-lg xl:h-min xl:px-0 xl:pt-8 xl:text-xl 2xl:text-xl"
+            >
+                <li class="pb-4 xl:pb-8">
+                    <Link text="See the software" to="/software" /> I've worked on
+                </li>
+                <li class="pb-4 xl:pb-8">
+                    Or, if that's not your thing, you can
+                    <Link text="view my films" to="/film" />
+                </li>
+                <li class="pb-4 xl:pb-8">
+                    <Link text="My contact" to="/contact" /> is also available, if
+                    you just want to get to me
+                </li>
+            </ul>
+        </div>
+    </main>
 </Layout>
+
+<style>
+    .rollable {
+        display: inline-block;
+        transform-origin: 50% 50% -0.6em;
+        transition:
+            transform 0.5s ease-in-out,
+            opacity 0.5s ease-in-out;
+        grid-column: 1 / 1;
+        grid-row: 1 / 1;
+    }
+
+    .rolled-out {
+        transform: perspective(500px) translateZ(-0.6em) rotateX(90deg);
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .rolled-in {
+        transform: perspective(500px) translateZ(-0.6em) rotateX(0deg);
+        opacity: 1;
+        z-index: 2;
+    }
+
+    .hide {
+        transform: perspective(500px) translateZ(-0.6em) rotateX(-90deg);
+        opacity: 0;
+        transition: none;
+    }
+
+    #prefix {
+        transition: width 0.5s ease-in-out;
+        display: inline-block;
+        word-wrap: normal;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        vertical-align: bottom;
+        mask-image: linear-gradient(to left, transparent, black 0.25ch);
+    }
+
+    .prefix-a {
+        width: 1ch;
+    }
+
+    .prefix-an {
+        width: 2ch;
+    }
+</style>
+
+<script>
+    const allWords = document.getElementById("roll-container")!.children;
+    const prefix = document.getElementById("prefix")!;
+
+    let lastRolledOutIndex = allWords.length - 1; // last element
+
+    function next() {
+        const toHide = allWords.item(lastRolledOutIndex)!;
+        const toRollOut = allWords.item(
+            (lastRolledOutIndex + 1) % allWords.length,
+        )!;
+        const toRollIn = allWords.item(
+            (lastRolledOutIndex + 2) % allWords.length,
+        )!;
+
+        toHide.classList.replace("rolled-out", "hide");
+        toRollOut.classList.replace("rolled-in", "rolled-out");
+        toRollIn.classList.replace("hide", "rolled-in");
+
+        lastRolledOutIndex = (lastRolledOutIndex + 1) % allWords.length;
+
+        if (isVowel(toRollIn.textContent![0]!)) {
+            prefix.classList.remove("prefix-a");
+            prefix.classList.add("prefix-an");
+        } else {
+            prefix.classList.remove("prefix-an");
+            prefix.classList.add("prefix-a");
+        }
+    }
+
+    function isVowel(char: string) {
+        return "aeiou".includes(char.toLowerCase());
+    }
+
+    setInterval(next, 3000);
+</script>

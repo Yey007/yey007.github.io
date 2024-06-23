@@ -1,10 +1,10 @@
 ---
 interface Props {
-    name: string;
+    text: string;
     to: string;
 }
 
-const { name, to } = Astro.props;
+const { text, to } = Astro.props;
 ---
 
-<a class="text-ocean hover:text-light-sky" href={to}>{name}</a>
+<a class="text-ocean hover:text-light-sky" href={to}>{text}</a>

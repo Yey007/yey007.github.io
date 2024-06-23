@@ -9,9 +9,6 @@ export default {
                 "light-metal": "#2b2b2b",
                 "dark-metal": "#242424",
             },
-            screens: {
-                sm: "600px",
-            },
             height: {
                 18: "4.5rem",
             },
