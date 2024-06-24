@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+import GithubMarkLight from "../images/GitHub-Mark-Light.png";
+import PageHeader from "../components/projects/PageHeader.astro";
+import SectionHeader from "../components/projects/SectionHeader.astro";
+import { getCollection } from "astro:content";
+import SoftwareProject from "../components/projects/SoftwareProject.astro";
+
+const personalSoftware = await getCollection("software-personal");
+---
+
+<Layout title="software">
+    <main class="px-8 pb-16 pt-28 sm:px-12">
+        <PageHeader
+            title="Software"
+            image={GithubMarkLight}
+            link="https://github.com/Yey007"
+        />
+        <section>
+            <SectionHeader title="Personal Projects" />
+            {
+                personalSoftware
+                    .toSorted((a, b) => a.data.order - b.data.order)
+                    .map((project) => <SoftwareProject entry={project} />)
+            }
+        </section>
+    </main>
+</Layout>

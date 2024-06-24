@@ -1,0 +1,24 @@
+---
+import type { CollectionEntry } from "astro:content";
+import ProjectHeader from "./ProjectHeader.astro";
+
+interface Props {
+    entry: CollectionEntry<"software-personal">;
+}
+
+const { entry } = Astro.props;
+const { Content, headings } = await entry.render();
+
+if (headings.length != 0) {
+    throw new Error("Software content should not contain headings");
+}
+---
+
+<section>
+    <ProjectHeader title={entry.data.title} link={entry.data.link} />
+    <div
+        class="[&>p]:pb-2 md:[&>p]:max-w-[75ch] [&_a]:text-ocean hover:[&_a]:text-light-sky"
+    >
+        <Content />
+    </div>
+</section>
