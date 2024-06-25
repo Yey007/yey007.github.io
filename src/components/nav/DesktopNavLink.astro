@@ -1,18 +1,20 @@
 ---
+import { normalizePath } from "./normalizePath";
+
 interface Props {
     name: string;
     to: string;
 }
 
 const path = Astro.url.pathname;
-
 const { name, to } = Astro.props;
+const onPage = normalizePath(to) === normalizePath(path);
 ---
 
 <a
     class:list={[
         "margin-0 flex h-full w-fit flex-shrink items-center justify-center border-r-4 border-r-light-metal bg-dark-metal px-8 text-2xl text-white hover:bg-light-metal hover:text-light-sky",
-        to === path
+        onPage
             ? "underline decoration-neutral-500 decoration-0 underline-offset-8"
             : "",
     ]}

@@ -1,4 +1,6 @@
 ---
+import { normalizePath } from "./normalizePath";
+
 interface Props {
     name: string;
     to: string;
@@ -6,12 +8,14 @@ interface Props {
 
 const path = Astro.url.pathname;
 const { name, to } = Astro.props;
+
+const onPage = normalizePath(to) === normalizePath(path);
 ---
 
 <a
     class:list={[
         "block pl-6 pr-8 pt-8 text-2xl text-white",
-        to === path
+        onPage
             ? "underline decoration-neutral-500 decoration-0 underline-offset-8"
             : "",
     ]}
