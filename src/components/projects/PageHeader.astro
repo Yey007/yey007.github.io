@@ -5,14 +5,15 @@ interface Props {
     title: string;
     image: ImageMetadata;
     link: string;
+    alt: string;
 }
 
-const { title, link, image } = Astro.props;
+const { title, link, image, alt } = Astro.props;
 ---
 
-<div class="flex flex-row content-center py-5">
-    <h1 class="pr-[1ch] pt-1 text-3xl font-bold">{title}</h1>
+<div class="flex flex-row py-5">
+    <h1 class="pr-[1ch] pt-1.5 text-3xl font-bold">{title}</h1>
     <a href={link}>
-        <Image src={image} alt="Github logo" class="h-12 w-12" />
+        <Image src={image} alt={alt} class="h-12 w-fit object-contain" />
     </a>
 </div>

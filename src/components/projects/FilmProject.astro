@@ -1,0 +1,31 @@
+---
+import type { CollectionEntry } from "astro:content";
+import ProjectHeader from "./ProjectHeader.astro";
+
+interface Props {
+    entry: CollectionEntry<"film">;
+}
+
+const { entry } = Astro.props;
+const { Content, headings } = await entry.render();
+
+if (headings.length != 0) {
+    throw new Error("Software content should not contain headings");
+}
+---
+
+<section class="flex flex-col xl:flex-row">
+    <div class="flex-1">
+        <ProjectHeader title={entry.data.title} link={entry.data.link} />
+        <Content />
+    </div>
+    <div class="flex-1 pt-10 text-center xl:pl-12">
+        <iframe
+            class="m-auto aspect-video h-auto w-full max-w-3xl border-none"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/EfZ1lZZ25Wk"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+</section>
