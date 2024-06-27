@@ -3,7 +3,7 @@ import IntroText from "./IntroText.astro";
 ---
 
 <IntroText>
-    I'm <span id="prefix" class="prefix-a">an </span>
+    I'm <span id="prefix" class="prefix-a">a </span>
     <div class="inline-grid grid-cols-[1fr/1fr] font-light" id="roll-container">
         <span class="rollable rolled-in text-[#ffb01d]">programmer.</span>
         <span class="rollable hide text-[slateblue]">engineer.</span>
@@ -95,6 +95,18 @@ import IntroText from "./IntroText.astro";
     function isVowel(char: string) {
         return "aeiou".includes(char.toLowerCase());
     }
+
+    prefix.addEventListener("transitionend", () => {
+        if (prefix.classList.contains("prefix-a")) {
+            prefix.innerText = "a ";
+        }
+    });
+
+    prefix.addEventListener("transitionstart", () => {
+        if (prefix.classList.contains("prefix-an")) {
+            prefix.innerText = "an ";
+        }
+    });
 
     setInterval(next, 3000);
 </script>

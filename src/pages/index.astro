@@ -6,16 +6,18 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Home">
-    <main class="flex h-screen flex-col justify-center xl:flex-row">
+    <main
+        class="flex h-screen flex-col justify-start px-8 pt-32 sm:justify-center sm:px-12 sm:pt-0 xl:flex-row xl:px-16"
+    >
         <div
-            class="flex flex-col pl-8 xl:flex-grow-[3] xl:basis-0 xl:justify-center xl:pl-16"
+            class="xl:flex xl:flex-grow-[3] xl:basis-0 xl:flex-col xl:justify-center"
         >
             <IntroText>Hi! I'm Utku.</IntroText>
             <RollingDisplay />
         </div>
         <div class="flex flex-col justify-center xl:flex-grow-[2] xl:basis-0">
             <ul
-                class="xl list-disc px-12 pt-12 text-lg xl:h-min xl:px-0 xl:pt-8 xl:text-xl 2xl:text-xl"
+                class="xl list-disc px-6 pt-10 text-lg xl:h-min xl:px-0 xl:pt-8 xl:text-xl 2xl:text-xl"
             >
                 <li class="pb-4 xl:pb-8">
                     <Link text="See the software" to="/software" /> I've worked on
@@ -24,7 +26,7 @@ import Layout from "../layouts/Layout.astro";
                     Or, if that's not your thing, you can
                     <Link text="view my films" to="/film" />
                 </li>
-                <li class="pb-4 xl:pb-8">
+                <li>
                     <Link text="My contact" to="/contact" /> is also available, if
                     you just want to get to me
                 </li>
