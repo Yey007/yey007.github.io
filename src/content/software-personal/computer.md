@@ -1,11 +1,11 @@
 ---
-title: computer-emulator
+title: computer-emulator (WIP)
 link: https://github.com/Yey007/computer-emulator
-order: 1
+order: 2
 ---
 
-Another work-in-progress. Basically, I'm trying to build a very
-simple computer with my own architecture in Minecraft. So far, I've
-come up with the architecture, built an emulator for it in Rust, and
-built the clock and a couple interactions of the ROM module. I'm
-currently working on compacting the ROM and building the RAM.
+`computer-emulator` is an emulator written in Rust for my custom 4-bit computer
+architechture. The architecture supports unsigned integer arithmetic, I/O,
+and memory pages. I'm also working on a custom assembler to make writing programs
+easier. I hope to one day build a working version in real-life or at least
+some kind of logic simulator.
