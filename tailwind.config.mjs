@@ -16,6 +16,9 @@ export default {
                 18: "4.5rem",
             },
         },
+        fontFamily: {
+            sans: ["Cantarell"]
+        }
     },
     plugins: [],
 };
