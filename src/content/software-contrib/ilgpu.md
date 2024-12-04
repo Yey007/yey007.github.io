@@ -1,7 +1,7 @@
 ---
 title: ILGPU
 link: https://github.com/m4rs-mt/ILGPU
-order: 0
+order: 2
 ---
 
 ILGPU is a .NET library that allows developers to write GPU
