@@ -17,7 +17,8 @@ export default {
             },
         },
         fontFamily: {
-            sans: ["Cantarell"]
+            sans: ["Cantarell"],
+            code: ["SFMono-Regular"]
         }
     },
     plugins: [],
