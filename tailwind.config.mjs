@@ -1,3 +1,5 @@
+import defaultTheme from "tailwindcss/defaultTheme";
+
 /** @type {import('tailwindcss').Config} */
 export default {
     content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -17,8 +19,8 @@ export default {
             },
         },
         fontFamily: {
-            sans: ["Cantarell"],
-            code: ["SFMono-Regular"]
+            sans: ["Cantarell", ...defaultTheme.fontFamily.sans],
+            mono: ["Courier New", ...defaultTheme.fontFamily.mono],
         }
     },
     plugins: [],
