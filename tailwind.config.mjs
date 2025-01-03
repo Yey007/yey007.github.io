@@ -6,10 +6,13 @@ export default {
     theme: {
         extend: {
             colors: {
-                "light-sky": "#3a7bba",
-                ocean: "#2e6294",
-                "light-metal": "#2b2b2b",
-                "dark-metal": "#242424",
+                "off-white": "#f2f0ef",
+                "link-highlight-blue": "#557c99",
+                "link-highlight": "#997255",
+                link: "#557c99",
+                "light-metal": "#313131",
+                "dark-metal": "#292929",
+                "darker-metal": "#161616"
             },
             height: {
                 18: "4.5rem",

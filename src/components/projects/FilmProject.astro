@@ -10,11 +10,11 @@ const { entry } = Astro.props;
 const { Content, headings } = await entry.render();
 
 if (headings.length != 0) {
-    throw new Error("Software content should not contain headings");
+    throw new Error("Film content should not contain headings");
 }
 ---
 
-<section class="flex flex-col xl:flex-row">
+<section class="flex flex-col xl:flex-row text-lg">
     <div class="flex-1">
         <ProjectHeader title={entry.data.title} link={entry.data.link} />
         <Content />
